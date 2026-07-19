@@ -7,3 +7,4 @@
 - [GitHub Backup Rule](github-backup-rule.md) — 先读仓库再行动，不做重复无用工
 - [MMD Projects](mmd-projects.md) — 用户的 MMD 创作项目：炉心融解滤镜方案
 - [TTS Status](tts-status.md) — TTS 语音已重建并正常运行（BERT fp16修复）
+- [Hiragana LipSync Setup](hiragana-lipsync-setup.md) — MMD口型工具配置完成（模型下载/GPU/导出路径）
