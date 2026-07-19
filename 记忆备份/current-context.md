@@ -29,6 +29,7 @@ metadata:
 - `E:\0\AI\MikuChat-main\` — MikuChat 项目
 - `E:\0\AI\MikuChat-main\launcher.py` — 一键启动器
 - `E:\0\AI\MikuChat-main\MikuChat启动器.bat` — bat版启动器
+- `E:\0\MMD\嘴型自动生成Hiragana-LipSync-main\` — Hiragana LipSync 口型工具（PyTorch 2.11.0+cu128 CUDA版）
 
 ## MikuChat 状态
 - 后端运行在 http://127.0.0.1:8000

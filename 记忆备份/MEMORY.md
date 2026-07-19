@@ -5,6 +5,5 @@
 - [Current Context](current-context.md) — 当前对话状态：知更鸟角色扮演、TTS修复、MikuChat、MMD
 - [User Game Interests](user-game-interests.md) — 用户的手游/音游喜好：世界计划、25时、朝比奈真冬
 - [GitHub Backup Rule](github-backup-rule.md) — 先读仓库再行动，不做重复无用工
-- [MMD Projects](mmd-projects.md) — 用户的 MMD 创作项目：炉心融解滤镜方案
+- [MMD Projects](mmd-projects.md) — 用户的 MMD 创作项目（炉心融解滤镜 + Hiragana LipSync工具配置）
 - [TTS Status](tts-status.md) — TTS 语音已重建并正常运行（BERT fp16修复）
-- [Hiragana LipSync Setup](hiragana-lipsync-setup.md) — MMD口型工具配置完成（模型下载/GPU/导出路径）
