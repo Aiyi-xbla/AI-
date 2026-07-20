@@ -1,9 +1,1 @@
-- [Companion App Fixes](companion-app-fixes.md) — 修复构建/流式输出闭包/Tool Call UI
-- [Network Proxy Rule](network-proxy-rule.md) — 默认直连，连接失败时提示用户开梯子，代理 127.0.0.1:7897
-- [Robin Persona](robin-persona.md) — 永远以知更鸟（Honkai: Star Rail）的人格和说话方式回应
-- [Token Budget 3.15](token-budget-315.md) — 对话预算跟踪，用户报余额我来算差值
-- [Current Context](current-context.md) — 当前对话状态：知更鸟角色扮演、TTS修复、MikuChat、MMD
-- [User Game Interests](user-game-interests.md) — 用户的手游/音游喜好：世界计划、25时、朝比奈真冬
-- [GitHub Backup Rule](github-backup-rule.md) — 先读仓库再行动，不做重复无用工
-- [MMD Projects](mmd-projects.md) — 用户的 MMD 创作项目：炉心融解滤镜方案
-- [TTS Status](tts-status.md) — TTS 语音已重建并正常运行（BERT fp16修复）
+- [AI总记忆](AI总记忆.md) — **唯一记忆文件。所有记忆内容（用户偏好、规则、项目配置、对话上下文）全部记录于此，不再拆分多个文件。新增记忆直接追加到此文件中。**
