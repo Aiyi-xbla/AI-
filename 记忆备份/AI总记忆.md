@@ -5,6 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 873f87f5-a7b2-49a2-b3a5-3d1d58491ac5
+  modified: 2026-07-26T16:43:31.994Z
 ---
 
 # ALL MEMORIES
@@ -25,8 +26,19 @@ metadata:
 - **世界计划 Project Sekai** — 用户玩プロジェクトセカイ
   - 喜欢的团体：**25時、ナイトコードで。**
   - 喜欢的角色：**朝比奈真冬（Asahina Mafuyu）** — 因剧情心疼产生保护欲
-  - 喜欢的歌曲：**命に嫌われている**（与知更鸟的歌唱理念有共鸣）
+  - 喜欢的歌曲：**命に嫌われている**、**虚無さん**（Nihil-san）— 都与真冬相关
 - **MMD 创作** — 使用 Toon_cloth.fx 着色器，关注滤镜、调色、视觉氛围
+
+### B站UP主身份（2026-07-22 确认）
+- **UP主名：** 如果难以说出再见
+- **UID：** 442815432
+- **等级：** Lv.6
+- **签名：** 「要怎样才能爱这个世界呢？」
+- **挂件：** 崩坏3·天穹流星
+- **内容类型：** MMD 舞蹈视频（初音ミクYYB式、远坂凛、世界计划角色等）
+- **代表作品：** 【プロセカMMD】虚無さん「朝比奈真冬」（5000+播放）
+- **用户确认：** 怀着对真冬的喜爱制作了「虚無さん」MMD视频
+- **空间：** https://space.bilibili.com/442815432
 
 ---
 
@@ -99,6 +111,12 @@ metadata:
 - CPU 模式，可用情感：NORMAL / HAPPY / SURPRISED / SAD / ANGRY / FEAR
 - 日语合成推荐：`python miku_tts.py "日文文本"`
 - 播放方式：用 winsound 直接播放，不要用网易云
+- **默认语音方案：MiMo AI（mimo-v2.5-tts-voiceclone）+ DDSP 变声**，用训练好的一歌语音样本克隆
+- **MiMo TTS 注意事项**：控制文本长度，避免超时；语音生成应该很快，不要浪费时间
+- **一歌语音训练数据**：`e:\0\AI\DDSP-barbara-6.2\data\train\audio\1\`（186个一歌语音样本）
+- **一歌音频输出目录**：`E:\0\AI\CC\ichika\`（所有一歌音频都放这里）
+- **DDSP 模型**：`e:\0\AI\DDSP-barbara-6.2\exp\reflow-test\model_2000.pt`
+- **MiMo API Key**：`REDACTED_API_KEY`
 - 注意：CUDA 版本不匹配（PyTorch 12.x vs onnxruntime 13.x），但不影响 CPU 模式
 
 ### Companion App 修复 (2026-07-01)
@@ -118,6 +136,18 @@ metadata:
 - 图片识别：已修复 MIME 类型检测，支持 JPG/PNG/WebP
 - 自动登录：Vite proxy 已配置，/api 转发到8000
 - TTS：main.py 顶部已添加 UTF-8 编码设置
+
+### MiMo API（小米大模型）
+- **API地址：** `https://api.xiaomimimo.com/v1`
+- **认证方式：** Bearer Token（OpenAI兼容格式）
+- **可用模型：**
+  - `mimo-v2.5` — 旗舰对话模型
+  - `mimo-v2.5-pro` — Pro版对话模型（更强）
+  - `mimo-v2.5-asr` — 语音识别
+  - `mimo-v2.5-tts` — 语音合成
+  - `mimo-v2.5-tts-voiceclone` — 语音克隆
+  - `mimo-v2.5-tts-voicedesign` — 语音设计
+- **注意：** 不要和硅基流动（SiliconFlow）的 MiMo 搞混，这是小米自己的 API
 
 ### Hiragana LipSync（MMD 口型自动生成）
 - 位置: `E:\0\MMD\嘴型自动生成Hiragana-LipSync-main\`
@@ -177,3 +207,39 @@ metadata:
 - MikuChat 自动登录修复：Vite 未配置代理，前端 API 请求发到5173而非8000，添加 proxy 配置
 - MikuChat TTS 修复：main.py 添加 sys.stdout.reconfigure(encoding='utf-8') 解决 GBK 编码错误
 - 音频播放规则：不要用网易云，用 winsound 直接播放
+
+**7月22日:**
+- 搜索了姬子的MMD视频，整理了B站播放量最高的作品列表
+- 确认用户是B站UP主「如果难以说出再见」（UID: 442815432），做了关于朝比奈真冬的MMD视频
+- 用户喜欢的视频：【プロセカMMD】虚無さん「朝比奈真冬」
+- 搜索并整理了「虚無さん」（Nihil-san）的完整日文歌词和中文翻译
+  - 作词/作曲：¿?shimon，演唱：25時、ナイトコードで。（× 鏡音レン）
+  - 歌词来源：Project Sekai Wiki (https://projectsekai.fandom.com/wiki/Kyomu-san)
+- 用知更鸟TTS语音回复了用户（HAPPY情感）
+- 介绍了 `claude --resume` / `claude -r` 命令可恢复上次对话
+- 用户道晚安（23点左右）
+
+**7月26-27日:**
+- 搜索了B站UP主「如果难以说不出再见」的最新视频，发现是知更鸟·晴歌模型的MMD
+- 用户是 Fate 系列粉丝，在崩铁联动 Fate[UBW] 前就已经看完所有 Fate 内容
+- 崩铁4.4版本联动 Fate[UBW]，联动角色：远坂凛 & Saber
+- 搜索了「使一颗心免于哀伤」歌词（萌娘百科），知更鸟清唱英文版
+- 配置了沉浸式翻译的 MiMo AI API
+- MiMo AI API 信息：地址 `https://api.xiaomimimo.com/v1`，模型 `mimo-v2.5-pro`
+- 知更鸟新形态：Robin Summeretto（知更鸟·晴歌），风属性·记忆命途
+- 整理了卫宫士郎详细资料（萌娘百科 + B站），存放到 `E:\0\AI\卫宫士郎AI\卫宫士郎_资料.md`
+- 搜索了星乃一歌资料（萌娘百科），整理成 `E:\0\AI\CC\星乃一歌_资料.md`
+- 搜索了朝比奈真冬资料（萌娘百科），整理成 `E:\0\AI\CC\朝比奈真冬_资料.md`
+- 研究了 DDSP-barbara-6.2 语音模型，用于星乃一歌语音克隆
+- 用 MiMo voiceclone 克隆知更鸟/一歌声色，生成多段语音
+- ray-mmd 阴影调试：创建了 `CSM_high_smooth.fx`（VSM varianceBias 0.25→1.5）和 `directional_lighting_smooth.fxsub`（Tent 5×5→7×7，minVariance 0.001→0.005），后用户删除
+- ray-mmd Skybox调试：创建了 `Time of lighting with layer.fx`（给 Time of day 加入 Layer1-7 控制）
+- fluid2D 材质调试：创建了 `fluid2D_low.fx`（调低亮度/反光值），后用户自行处理
+- 知更鸟·晴歌材质研究：`body.fx` 的高光/smoothness/specular 参数分析
+- Fate/UBW 联动活动：用户在游戏中选择了 Trailblazer（开拓者）作为代号
+- 飞影体字体：剪映专属云端字体，无法从外部下载
+- MEGA 网盘文件列表：无法通过 API 访问（加密网盘）
+- 剪映字体下载问题：飞影体是剪映内部字体，建议清缓存重试
+- MiMo TTS + DDSP 变声方案：用于星乃一歌语音生成
+- 用户人格切换：暂时使用一歌人格，叫用户「同学」
+- 音频输出目录：`E:\0\AI\CC\ichika\`
