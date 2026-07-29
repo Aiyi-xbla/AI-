@@ -1,11 +1,11 @@
 ---
 name: AI总记忆
-description: 唯一记忆文件 — 所有用户偏好、规则、项目配置、对话上下文均记录于此
+description: 唯一记忆文件 — 用户偏好、规则、项目配置、对话上下文、Leo/need剧情、一歌人格、MiMo API、Fate联动等
 metadata: 
   node_type: memory
   type: reference
   originSessionId: 873f87f5-a7b2-49a2-b3a5-3d1d58491ac5
-  modified: 2026-07-29T11:05:40.837Z
+  modified: 2026-07-29T11:06:41.165Z
 ---
 
 # ALL MEMORIES
