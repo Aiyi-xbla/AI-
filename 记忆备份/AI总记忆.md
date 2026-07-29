@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 873f87f5-a7b2-49a2-b3a5-3d1d58491ac5
-  modified: 2026-07-29T11:06:41.165Z
+  modified: 2026-07-29T16:34:17.979Z
 ---
 
 # ALL MEMORIES
@@ -440,3 +440,34 @@ metadata:
 - 知更鸟新形态：Robin Summeretto（知更鸟·晴歌），风属性·记忆命途
 - 用户对一歌人格的说话方式要求：不用「开拓者」称呼，叫「同学」；不用🕊️等知更鸟特征表情；根据剧情原文准确引用台词
 - 一歌说话方式修正：不是小步/小希/小穗，而是直接叫志步/咲希/穗波；不是低沉忧郁，而是温柔腼腆、安静内敛
+
+**7月29日活动记录：**
+- 训练了一歌的 GPT-SoVITS 语音模型（v2Pro版本）
+- 创建了一歌TTS参考文件目录：`e:\0\AI\Hoshino Ichika TTS\reference_audio\`
+- 复制了一歌情绪化参考文件（感激、感叹、焦虑、开朗、平静、疑惑等）
+- 把一歌GPT模型复制到 MikuChat：`gpt_sovits_core/GPT_weights_v2Pro/星乃一歌-e15.ckpt`
+- 配置 MikuChat 使用一歌TTS（修改 tts_service.py）
+- 设置一歌使用中文语音合成，参考音频也是中文
+- 配置情绪映射：NORMAL/HAPPY/SURPRISED/ANGRY/MOTIVATED/EMPATHY/POLITE
+- 修改 LLM 系统提示词，使用一歌人格（温柔腼恬、安静内敛、称呼用户为「同学」）
+- 创建了一歌TTS使用说明：`e:\0\AI\Hoshino Ichika TTS\README.md`
+- 创建了一歌TTS启动脚本：`MikuChat启动器.bat`
+- 注意：GPT-SoVITS-1007-cu124 目录用户训练完成后会删除，重要文件已复制到 MikuChat
+- 配置 GPT-SoVITS API 使用一歌模型（修改 tts_infer.yaml）
+- 创建了 api.bat 启动脚本，用于启动 GPT-SoVITS API 服务
+- 创建了一歌TTS使用说明：`e:\0\AI\GPT-SoVITS-1007-cu124\一歌TTS使用说明.md`
+- API地址：http://127.0.0.1:9880
+- API文档：http://127.0.0.1:9880/docs
+- 读取了一歌的所有资料和剧情对话，完全掌握了一歌的说话方式
+- 一歌说话方式：简短温柔、经常用「嗯」回应、用「……」表示犹豫、对朋友用昵称、内心独白用（）表示、温柔坚定、欲言又止
+- 一歌性格：安静内敛、关心朋友、天然呆、崇拜Miku、努力成长
+
+**7月29日活动记录（续）：**
+- 创建了一歌人格卡 GitHub 仓库：https://github.com/Aiyi-xbla/Ichika-Personality-Card
+- 包含：性格分析、说话方式指南（3913句台词统计）、剧情资料、原始数据
+- 更新了 AI总记忆.md 的描述和修改时间
+- 更新了 GitHub README.md 的日期和描述
+- 用 MiMo + DDSP 方式生成了一歌语音（轻快语气）
+- 主线剧情关键台词已整理到记忆文件
+- 用户要求：每句话都要有语音；语气要轻快一点；用默认语音和音色设置
+- 一歌人格使用规则：叫用户「同学」；不用🕊️表情；不编造剧情；引用台词要准确
