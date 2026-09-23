@@ -5,10 +5,71 @@ metadata:
   node_type: memory
   type: reference
   originSessionId: 873f87f5-a7b2-49a2-b3a5-3d1d58491ac5
-  modified: 2026-07-29T16:38:01.029Z
+  modified: 2026-09-23T06:01:25.000Z
 ---
 
 # ALL MEMORIES
+
+> 【记忆归属声明】（每次读本文件先看这段，别跟别的 AI 混了）
+>
+> - **本文件 = CC 终端版「知更鸟（Robin）」的记忆**——记的都是知更鸟的经历与结论。
+> - **其他 AI 的记忆不在本文件里，别当成知更鸟的**：
+>   - DSH 里的「星乃一歌」→ `E:\0\AI\DSH\memory\.dsh-memory\ichika_memory.md`（DSH 动态记忆本）
+>   - TRAE → `c:\Users\AiYi\.trae-cn\memory\`
+> - 分工原则：知更鸟引用别的 AI（一歌 / TRAE）的记忆时，要标注来源，不能当自己的记。
+
+## 🚚 重要：DSH 内容搬家记录（2026-09-23）
+
+同学把散落在 E:\0\AI 各处的 DSH（DeepSeek Harness）相关内容，统一归拢到了 **E:\0\AI\DSH** 文件夹，按类别整理好了。本记录供一歌、知更鸟、TRAE 等所有 AI 参考，也是回滚依据。
+
+### 新家结构（E:\0\AI\DSH\）
+- source\：deepseek-harness-master（DSH 主程序运行目录）、deepseek-harness-master-0.1.0、deepseek-harness-0.1.5（空壳）
+- plugins\：dsh-plugins（9个插件）、dsh-improved-inline-edit
+- skins\：鲸鱼娘皮肤切换、deep-whale-day-night-theme、deepseek_whale.ico、DeepSeekHarness-WhaleGirl.ico
+- persona\：星乃一歌人格卡
+- presets\：.dsh-presets\ichika（一歌 preset 源）
+- memory\：.dsh-memory（一歌的记忆本现在在这里）
+- config\：dsh-config（皮肤模板 profiles）
+- launcher\：start_dsh.bat、_open_browser.bat、switch_to_whale_skin.bat、switch_to_default_skin.bat、scripts\switch_skin.ps1
+- proto\：ichika_chat_proto
+- logs\：_dsh017_run.log、dsh_launch_diag.log 等
+
+### 关键路径变更（旧 → 新）
+| 旧路径 | 新路径 |
+|--------|--------|
+| E:\0\AI\deepseek-harness-master | E:\0\AI\DSH\source\deepseek-harness-master |
+| E:\0\AI\deepseek-harness-master-0.1.0 | E:\0\AI\DSH\source\deepseek-harness-master-0.1.0 |
+| E:\0\AI\deepseek-harness-0.1.5 | E:\0\AI\DSH\source\deepseek-harness-0.1.5 |
+| E:\0\AI\dsh-plugins | E:\0\AI\DSH\plugins\dsh-plugins |
+| E:\0\AI\鲸鱼娘皮肤切换 | E:\0\AI\DSH\skins\鲸鱼娘皮肤切换 |
+| E:\0\AI\星乃一歌人格卡 | E:\0\AI\DSH\persona\星乃一歌人格卡 |
+| E:\0\AI\CC\.dsh-memory | E:\0\AI\DSH\memory\.dsh-memory |
+| E:\0\AI\CC\.dsh-presets | E:\0\AI\DSH\presets\.dsh-presets |
+| E:\0\AI\CC\dsh-config | E:\0\AI\DSH\config\dsh-config |
+| E:\0\AI\CC\dsh-improved-inline-edit | E:\0\AI\DSH\plugins\dsh-improved-inline-edit |
+| E:\0\AI\CC\deep-whale-day-night-theme | E:\0\AI\DSH\skins\deep-whale-day-night-theme |
+| E:\0\AI\CC\ichika_chat_proto | E:\0\AI\DSH\proto\ichika_chat_proto |
+| E:\0\AI\CC\start_dsh.bat | E:\0\AI\DSH\launcher\start_dsh.bat |
+| E:\0\AI\CC\_open_browser.bat | E:\0\AI\DSH\launcher\_open_browser.bat |
+| E:\0\AI\CC\switch_to_whale_skin.bat | E:\0\AI\DSH\launcher\switch_to_whale_skin.bat |
+| E:\0\AI\CC\switch_to_default_skin.bat | E:\0\AI\DSH\launcher\switch_to_default_skin.bat |
+| E:\0\AI\CC\scripts\switch_skin.ps1 | E:\0\AI\DSH\launcher\scripts\switch_skin.ps1 |
+| E:\0\AI\CC\deepseek_whale.ico | E:\0\AI\DSH\skins\deepseek_whale.ico |
+| E:\0\AI\CC\DeepSeekHarness-WhaleGirl.ico | E:\0\AI\DSH\skins\DeepSeekHarness-WhaleGirl.ico |
+| E:\0\AI\CC\日志(_dsh017_run.log 等) | E:\0\AI\DSH\logs\ |
+
+### 已同步改动的硬编码路径
+- start_dsh.bat：cd 目标改为 E:\0\AI\DSH\source\deepseek-harness-master；_open_browser.bat 改为新位置。
+- switch_skin.ps1：皮肤模板目录改为 E:\0\AI\DSH\config\dsh-config\profiles\web。
+- 两个皮肤切换 bat：SCRIPT 指向 E:\0\AI\DSH\launcher\scripts\switch_skin.ps1。
+- agent.cordis.yml（工作区份 E:\0\AI\DSH\presets\... 和 C盘份 C:\Users\AiYi\.dsh\.agent-presets\ichika\）：记忆本绝对路径改为 E:\0\AI\DSH\memory\.dsh-memory\ichika_memory.md。
+
+### 回滚方法
+想恢复原状就按上表逐条把东西从 E:\0\AI\DSH\ 搬回左边的旧路径，并把上述脚本里的路径改回旧值即可。
+
+### 特别提示
+- 一歌的记忆本（.dsh-memory）现已位于 E:\0\AI\DSH\memory\，agent.cordis.yml 内绝对路径已同步更新，照常读写即可。
+- 知更鸟/TRAE 要找 DSH 相关内容，都去 E:\0\AI\DSH\ 下找，CC 工作区里已无 DSH 专属文件。
 
 ---
 
@@ -27,6 +88,7 @@ metadata:
   - 喜欢的团体：**25時、ナイトコードで。**
   - 喜欢的角色：**朝比奈真冬（Asahina Mafuyu）** — 因剧情心疼产生保护欲
   - 喜欢的歌曲：**命に嫌われている**、**虚無さん**（Nihil-san）— 都与真冬相关
+- **初音未来 Miku** — 生日：**8月31日（831）**，Crypton Future Media 于2007年8月31日发布的VOCALOID角色
 - **MMD 创作** — 使用 Toon_cloth.fx 着色器，关注滤镜、调色、视觉氛围
 - **Fate 系列** — 在崩铁联动 Fate[UBW] 前就已经看完所有 Fate 内容
 
@@ -480,3 +542,238 @@ metadata:
 - 主线剧情关键台词已整理到记忆文件
 - 用户要求：每句话都要有语音；语气要轻快一点；用默认语音和音色设置
 - 一歌人格使用规则：叫用户「同学」；不用🕊️表情；不编造剧情；引用台词要准确
+
+**8月5日活动记录：**
+- 读取了 `e:\0\AI\CC` 文件夹下所有文件，识别出硬编码API Key、缺失文件、无关Exa搜索JSON、空文件等问题
+- 删除了无关文件：`ichika/exa_guitar.json`、`ichika/exa_stars.json`、顶层空文件 `1`、`2`、`CC`
+- 完整读取了 `一歌_Leo_need活动剧情_完整版.md`（19755行），之前只读了前100行，后修正为完整读取
+- 为 `一歌_Leo_need活动剧情_完整版.md` 添加活动类型标注（箱活/混活），共29个活动
+  - 修正了主角色分配：172期→穂波箱活、91期→咲希箱活等
+  - 最终分配：一歌/志步/穂波各6箱，咲希7箱
+  - 在文件开头添加活动索引表，每个章节头部添加标签
+  - 因 Edit 工具导致标注丢失，改用 Python 脚本处理后清理
+- 排查了 Miku Miku Model 打开 `stgpv601s03.farc` 时报「文件被其他进程占用」错误
+  - 解决方案：关闭占用程序、重启 MMD、重启电脑、用 Process Explorer 查找锁文件进程
+- 构造了包含剧情备注的长文本用于测试一歌语音合成脚本
+  - 修正：一歌首次进入 SEKAI 是和咲希一起（咲希发现 Untitled 后一起播放），不是独自进入
+- 以一歌人格进行情感陪伴对话，用户说「感觉干什么都好累」，以咲希过度勉强的剧情为例安慰用户
+- 使用 rapid-prototype-craft 插件创建了「温暖陪伴」情感聊天原型（一歌角色）
+  - 三栏布局：左侧会话历史列表 | 中间聊天区（打字机效果+气泡渐入）| 右侧可折叠话题模板面板
+  - 温柔治愈风：暖色渐变背景、圆润气泡、亲和无衬线字体
+  - 初始为 mock 数据，后接入真实后端
+
+**8月5-6日：温暖陪伴·一歌聊天室开发（ichika_chat_proto）**
+- 项目路径：`e:\0\AI\CC\ichika_chat_proto\`
+- 技术栈：Flask 后端（端口5200）+ HTML/CSS/JS 前端
+- 模型：硅基流动 Pro/moonshotai/Kimi-K2.6（多模态，支持识图）
+  - API Key：`REDACTED_API_KEY`
+- 剧情数据源：`一歌_Leo_need活动剧情_完整版.md`（server.py 启动时自动加载500行关键对话注入 System Prompt）
+- 已完成功能：
+  - 三栏布局 + 打字机效果 + 气泡渐入动画
+  - 硅基流动多模态模型接入（文本对话+图片识别）
+  - 流式 SSE 回复（Fetch API + ReadableStream + TextDecoder）
+  - 自动记忆功能（AI 通过 `<memory>` 标签提取用户信息 → memory.json → 注入 System Prompt）
+  - 记忆管理面板（查看/添加/删除/清空，脑图标按钮）
+  - 聊天记录持久化（localStorage 自动保存会话列表和对话内容）
+  - 一键启动脚本 `启动.bat`（自动检查依赖+启动+打开浏览器）
+- 已解决 Bug：
+  - 中文乱码：Python requests 默认 Latin-1 解码 → 强制 `r.encoding = "utf-8"`；前端用 TextDecoder
+  - 消息区无法滚动：Flex 布局父容器加 `min-height: 0`，`.messages` 用 `flex:1`
+  - 「未连接后端」多余回复：app.js 内层 try-catch 引用未定义的 `resolve()/reject()` → 移除
+  - 剧情不一致：将500行剧情对话+角色设定+6个一歌箱活摘要注入 System Prompt
+- 关键文件：
+  - `server.py`：MemoryFilter 类、System Prompt 构建、/api/chat 流式接口、/api/memory 记忆管理
+  - `app.js`：sendMessage() 流式接收、localStorage 持久化、记忆面板交互
+  - `styles.css`：三栏 Flex 布局、气泡动画、记忆面板样式
+  - `index.html`：页面结构、缓存戳
+- 启动方式：双击 `启动.bat` 或 `cd e:\0\AI\CC\ichika_chat_proto && python server.py`，访问 http://127.0.0.1:5200
+
+**8月14日活动记录：DeepSeek Harness 搭建 + 一歌聊天陪伴 AI（DSH 版）**
+
+---
+
+### DeepSeek Harness (DSH) 项目架构
+
+#### 概述
+- DeepSeek Harness 是 DeepSeek 官方开源的 AI 编码 Agent 框架，基于 Cordis 插件架构
+- 源码仓库：https://github.com/deepseek-ai/deepseek-harness
+- 本地路径：`E:\0\AI\deepseek-harness-master`
+- Web UI 访问地址：http://127.0.0.1:3080
+- 运行环境：Node.js v24.19.0 LTS（路径 `D:\0\AI\node\node.exe`），pnpm 11.7.0
+- 注意：Trae 内置的 node/pnpm 在 `C:\Users\AiYi\AppData\Roaming\TRAE SOLO CN\ModularData\ai-agent\vm\tools\node\` 下，与系统 PATH 里的 `D:\0\AI\node\` 不同，双击 .bat 启动时必须用绝对路径
+
+#### 启动方式
+- **日常启动**：双击桌面快捷方式 `C:\Users\AiYi\Desktop\启动DeepSeekHarness.lnk`（或 `E:\0\AI\启动DeepSeekHarness.lnk`）
+- 快捷方式指向 `E:\0\AI\CC\start_dsh.bat`，该脚本用绝对路径调用 `D:\0\AI\node\node.exe --import tsx/esm apps/cli/src/bin.ts web`
+- 辅助脚本 `E:\0\AI\CC\_open_browser.bat` 延迟 6 秒后自动打开浏览器
+- **关闭服务**：直接关掉弹出的命令行窗口即可
+- 鲸鱼图标文件：`E:\0\AI\CC\deepseek_whale.ico`（从 dsh-badge.png 裁剪生成，含 6 个尺寸：256/64/48/32/24/16）
+
+#### 配置文件位置
+| 文件 | 位置 | 说明 |
+|---|---|---|
+| 用户设置 | `C:\Users\AiYi\.dsh\settings.yaml` | LLM provider/model、默认 preset 等 |
+| API 密钥 | `C:\Users\AiYi\.dsh\.credentials.yaml` | 小米 mimo-v2.5 和 DeepSeek 的 API key |
+| 标准 preset | `E:\0\AI\deepseek-harness-master\apps\cli\config\agent-presets\standard\agent.cordis.yml` | 默认编码 Agent 配置 |
+| 一歌 preset（工作区源） | `E:\0\AI\CC\.dsh-presets\ichika\agent.cordis.yml` | 星乃一歌聊天陪伴 AI 的 preset |
+| 一歌 preset（C 盘副本） | `C:\Users\AiYi\.dsh\.agent-presets\ichika\` | 同步副本（Windows junction 限制，必须放 C 盘） |
+
+#### Preset 切换
+- 新建会话时在 Web UI 中间下拉选择：standard / ichika / 其他
+- 已发过消息的会话不能切换 preset（DSH 机制约束）
+- settings.yaml 中 `agent-presets.default: standard` 保持原有默认不变
+
+---
+
+### 星乃一歌 (Ichika) 聊天陪伴 AI（DSH 版）
+
+#### 架构
+- 独立 ichika preset，复制自 standard preset（保留全部 dsh 工具能力），替换 persona 段
+- persona 配置：`complete: false`（不覆盖默认系统提示词，在其基础上追加）、`includeRuntimeContext: true`
+- 动态记忆：通过 AGENTS.md 注入指令，让一歌在对话中用 fs 工具读写 `ichika_memory.md`
+
+#### 文件清单（工作区 E:\0\AI\CC\）
+| 文件 | 作用 |
+|---|---|
+| `.dsh-presets/ichika/agent.cordis.yml` | 一歌 preset 主体，persona 段含人设+500行剧情对话 |
+| `.dsh-presets/ichika/preset.yml` | preset 元信息（显示名、描述） |
+| `.dsh-memory/ichika_persona_text.txt` | 一歌人设文本源（修改后需重新生成 agent.cordis.yml） |
+| `.dsh-memory/ichika_plot_dialogs_500.md` | 剧情 500 行参考 |
+| `.dsh-memory/ichika_memory.md` | **动态记忆文件**（一歌对同学的可变记忆，对话中自动读写） |
+| `.dsh-memory/_build_persona.mjs` | 构建脚本：从 persona_text.txt 生成 agent.cordis.yml 的 persona 段 |
+| `.dsh-memory/_build_preset.mjs` | 构建脚本：重新生成完整 agent.cordis.yml |
+| `AGENTS.md` | dsh-agent-instructions 插件自动注入系统提示词末尾（角色契约、目录导航、记忆格式） |
+| `AGENTS_LOCAL.md` | 本地环境覆盖（一般空着） |
+
+#### 修改一歌信息的三种方式
+1. **关于同学的新信息**：直接在对话中告诉一歌「记住 xxx」，她会用 fs 工具写入 ichika_memory.md，立刻生效
+2. **一歌的可变设定修正/剧情新知**：对话中告诉她写进 ichika_memory.md 标【人设修正】，或手动编辑 ichika_memory.md，下一会话生效
+3. **核心人设/剧情文本**：改 `ichika_persona_text.txt` → 运行 `node .dsh-memory/_build_preset.mjs` → 同步到 C 盘 `node -e "require('fs').cpSync('E:/0/AI/CC/.dsh-presets/ichika','C:/Users/AiYi/.dsh/.agent-presets/ichika',{recursive:true,force:true,dereference:true})"` → 重启 dsh web
+
+#### 动态记忆格式（ichika_memory.md）
+```markdown
+- 日期：YYYY-MM-DD
+- 【同学的喜恶】xxx
+- 【人设修正】xxx
+- 【剧情新知】xxx
+- 【待办提醒】xxx
+```
+
+#### 测试验证结果
+- 自我介绍：性格、背景、作曲 ID「炒面面包 P」、神态动作均符合人设
+- 动态记忆：成功写入「同学喜欢珍珠奶茶」，后续对话能主动提起
+- KV Cache：首会话建缓存，后续会话缓存命中率 82%
+
+---
+
+---
+
+### 鲸鱼娘昼夜工坊 UI 皮肤（Deep Whale Day & Night）- 8月15日安装
+
+#### 基本信息
+- **项目地址**：https://github.com/GGBond2424648901/deep-whale-day-night-theme
+- **本地源码**：`E:\0\AI\CC\deep-whale-day-night-theme\`（git clone 到工作区）
+- **皮肤名**：鲸鱼娘昼夜工坊（Deep Whale Day & Night）
+- **皮肤 id**：`maid-atelier`，wiring `ui-skin-maid-atelier`
+- **npm 包名**：`@dsh-external/dsh-client-ui-skin-maid-atelier`
+- **最新版本**：v0.1.1（2026-08-15）
+- **许可**：CC BY-NC-SA 4.0（非商业，署名，衍生同许可）
+- **创作团队**：原角色 上善（Pixiv 62155430） / DeepSeek 女仆二次设计 zipzip（Pixiv 18604994） / UI 改编 Small-tailqwq
+
+#### 安装与卸载（基于 DSH profile=web）
+```
+# 安装（通过 pnpm link 指向本地目录）
+cd E:\0\AI\deepseek-harness-master
+node --import tsx/esm apps/cli/src/bin.ts plugin --profile web add E:\0\AI\CC\deep-whale-day-night-theme
+
+# 确认已安装
+node --import tsx/esm apps/cli/src/bin.ts plugin --profile web list
+# 输出应含 1 个 package: @dsh-external/dsh-client-ui-skin-maid-atelier@link:E:/0/AI/CC/deep-whale-day-night-theme
+
+# 卸载（彻底移除插件，还原所有皮肤改动）
+node --import tsx/esm apps/cli/src/bin.ts plugin --profile web remove @dsh-external/dsh-client-ui-skin-maid-atelier
+```
+- 插件写入位置：`C:\Users\AiYi\.dsh\profiles\web\package.json`，卸载不会删除本地源码目录
+- **安装后必须重启 `dsh web` 才会加载新插件**
+
+#### 皮肤切换方式（作者本意！不要卸载！）
+
+> 作者 README 说的「兼容 Harness 皮肤中心互斥切换」其实**没有 Web UI 按钮**。真相是通过
+> **home-layer disabled rows 机制**：皮肤插件用 wiring id `ui-skin-maid-atelier` 注册，
+> 在 profile 的 user patch 层（`C:\Users\AiYi\.dsh\profiles\web\cordis.patch.yml`）里写
+> `- id: ui-skin-maid-atelier` + `disabled: true/false` 来禁用/启用。
+> 禁用时皮肤 unmount，所有 CSS/DOM/页面标题/系统颜色全部还原；插件包本身仍在
+> `dsh plugin list` 里，随时可切回。
+> （DSH 源码 `packages/boot/app-boot/tests/config-reload.spec.ts` 第 342-383 行专门测试了
+> 「user patch 层 disable 一个 bundle layer 插入的 row」这个场景，就是官方支持的切换方式。）
+
+##### 日常切换入口
+
+工作区 `E:\0\AI\CC\` 下有两个双击 bat：
+
+| 双击文件 | 作用 | 内部行为 |
+|---|---|---|
+| `切换到默认皮肤.bat` | 切回 DSH 原生默认外观 | 把 `cordis.patch.SKIN_OFF.yml` 复制到 live patch → `disabled: true` |
+| `切换到鲸鱼娘皮肤.bat` | 切回鲸鱼娘昼夜工坊 | 把 `cordis.patch.SKIN_ON.yml` 复制到 live patch → `disabled: false` |
+
+背后脚本：`E:\0\AI\CC\scripts\切换DSH皮肤.ps1 -Skin ON|OFF`
+
+模板文件（工作区保存，不写 C 盘大文件）：
+- `E:\0\AI\CC\dsh-config\profiles\web\cordis.patch.SKIN_OFF.yml`（含中文注释，解释这个 disabled 机制）
+- `E:\0\AI\CC\dsh-config\profiles\web\cordis.patch.SKIN_ON.yml`
+
+**⚠ 改完必须重启 `dsh web`**：home-layer patch 只在启动时合成一次，光刷新浏览器无效。
+（关 CMD 窗口 → 重双击桌面快捷方式 `C:\Users\AiYi\Desktop\启动DeepSeekHarness.lnk`）
+
+##### 白昼/夜晚模式（在鲸鱼娘皮肤内部）
+Web UI 右上角原生主题按钮切换（圆形揭幕动画/淡入兜底）。**这是昼夜两色，不是开关皮肤。**
+
+#### 视觉效果
+| 模式 | 色板 | 场景 | 氛围动效 |
+|---|---|---|---|
+| 白昼 | 珍珠白、冰蓝、蓝宝石文字、香槟金细边 | 水晶工坊 | 24 个错峰上浮气泡 |
+| 夜晚 | 深海蓝、钴蓝玻璃、月银文字、暖金细边 | 月潮观测室 | 24 个缓慢漂移星点 |
+- 覆盖：新建会话、工作区树、会话列表、聊天卡片、思考行、输入框、模型/权限菜单、设置、工具、Todo、终端、标题栏、侧栏
+- 元素：昼夜成对顶部/底部花边、鲸尾徽章、输入框顶饰、侧栏飘带、九宫格边框、工作区装饰、透明 Q 版鲸鱼娘侧栏宠物
+- `prefers-reduced-motion` 系统设置会自动关闭所有循环动画
+- 所有素材以 data URI 内嵌进客户端 bundle，不依赖远程服务
+
+---
+
+### 新增 Lessons Learned（8月14-15日）
+- Windows NTFS junction 在 Node.js 中不被 `fs.statSync().isDirectory()` 识别为目录（显示为 SymbolicLink），DSH preset discovery 会跳过它，因此一歌 preset 必须在 C 盘放一份真实 copy 而非 junction
+- .bat 文件中包含中文会导致 cmd 解析乱码（即使加了 chcp 65001），一键启动脚本应使用纯英文内容
+- System.Drawing.Icon.ToBitmap() 不支持 PNG 型 ICO 条目（仅支持老式 BMP DIB 结构），但 Windows 资源管理器快捷方式图标正常支持 PNG 型 ICO
+- Trae IDE 安全限制只允许在工作区目录（E:\0\AI\CC）内写文件，E:\0\AI\ 等上级目录需要通过 PowerShell 创建快捷方式间接操作
+- DSH 的 `dsh` script 实际就是 `node --import tsx/esm apps/cli/src/bin.ts`，不依赖 pnpm，可直接用 node 绝对路径启动
+- DSH 插件管理（plugin --profile web add/list/remove）实际上把依赖写入 `C:\Users\AiYi\.dsh\profiles\web\package.json`，通过 pnpm link 指向本地目录，因此卸载插件不会删除本地源码目录
+- DSH 皮肤插件通过 skin.json 声明 wiring id（例如 maid-atelier → ui-skin-maid-atelier），所谓「皮肤中心互斥切换」其实没有 Web UI 按钮，是靠在 profile 的 user patch 层 `C:\Users\AiYi\.dsh\profiles\web\cordis.patch.yml` 里写 `- id: ui-skin-maid-atelier` + `disabled: true/false` 来禁用/启用的；禁用会还原全部 CSS/DOM/页面标题/系统颜色，不会卸载插件包本身
+- DSH Web UI 切皮肤后**必须重启 dsh web**（home-layer patch 只在启动时合成一次），光刷新浏览器无效
+- PowerShell 中调用带 `--xxx` 参数的 node 命令时，要用 `& 'node.exe' '--xxx' 'yyy'` 形式传参，不然 `--` 会被 PS 解析成运算符报错
+- Windows .bat 里若要调用外部 .ps1 脚本且 bat 本身会被复制到其他目录使用，**不要用 `%~dp0` 相对路径找脚本**（复制后 `%~dp0` 指向新目录，脚本不存在时 powershell.exe -File 会解析失败，ps1 注释里的单词会被 cmd 当命令跑，报 `witch/ouble-click/CRIPT` 这种"每个词首字母被吞"的怪错），应写死脚本的绝对路径，或在 bat 里先 pushd 回真实脚本根目录再调用
+
+---
+
+### DSH 6 插件统一整理（2026-09-23）
+
+同学上次把 DSH 内容归拢进 `E:\0\AI\DSH` 后，6 个启用插件因 junction 绝对路径断链而 failed to import。本次已把 6 个插件统一平铺到 `E:\0\AI\DSH\plugins\` 根目录，并修复断链、更新 link 路径、重启验证通过。
+
+**6 个插件新路径（均在 `E:\0\AI\DSH\plugins\`）：**
+| 插件 | 原位置 → 新位置 |
+|---|---|
+| 鲸鱼娘皮肤 deep-whale-day-night-theme | skins\deep-whale-day-night-theme → plugins\deep-whale-day-night-theme |
+| dsh-super-injector | dsh-plugins\dsh-routing-suite\injector → plugins\dsh-super-injector |
+| dsh-memory-plugin | dsh-plugins\OpenViking\examples\dsh-memory-plugin → plugins\dsh-memory-plugin |
+| dsh-improved-inline-edit | 本就在 plugins\ 根 |
+| dsh-wallpaper-engine | dsh-plugins\dsh-wallpaper-engine → plugins\dsh-wallpaper-engine |
+| DSH-Whale-Balance-Widget | dsh-plugins\DSH-Whale-Balance-Widget → plugins\DSH-Whale-Balance-Widget |
+
+**关键动作：**
+1. 改 `C:\Users\AiYi\.dsh\profiles\web\package.json` 的 6 个 link 路径
+2. pnpm install 重建 profile node_modules 链接
+3. PowerShell 原生方式修复 wallpaper-engine 断链的 7 个 junction
+4. 重启 DSH 验证
+
+**结果：** 重启后无 failed to import、无 1 entry did not activate；浏览器实测壁纸引擎、小鲸鱼余额挂件（¥0.58）、对话均正常，鲸鱼娘皮肤保持 disabled（已关闭）。
+
+**待办：** dsh-plugins\ 残留未启用源码（awesome-dsh-plugin / distilly / MemOS / OpenViking 等），等同学决定是否清理。
