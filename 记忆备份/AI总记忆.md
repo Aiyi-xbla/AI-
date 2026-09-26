@@ -188,7 +188,6 @@ metadata:
 - **一歌语音训练数据**：`e:\0\AI\DDSP-barbara-6.2\data\train\audio\1\`（186个一歌语音样本）
 - **一歌音频输出目录**：`E:\0\AI\CC\ichika\`（所有一歌音频都放这里）
 - **DDSP 模型**：`e:\0\AI\DDSP-barbara-6.2\exp\reflow-test\model_2000.pt`
-- **MiMo API Key**：`REDACTED_API_KEY`
 - 注意：CUDA 版本不匹配（PyTorch 12.x vs onnxruntime 13.x），但不影响 CPU 模式
 
 ### Companion App 修复 (2026-07-01)
@@ -211,7 +210,6 @@ metadata:
 
 ### MiMo API（小米大模型）
 - **API地址：** `https://api.xiaomimimo.com/v1`
-- **认证方式：** Bearer Token（OpenAI兼容格式）
 - **可用模型：**
   - `mimo-v2.5` — 旗舰对话模型
   - `mimo-v2.5-pro` — Pro版对话模型（更强）
@@ -566,7 +564,6 @@ metadata:
 - 项目路径：`e:\0\AI\CC\ichika_chat_proto\`
 - 技术栈：Flask 后端（端口5200）+ HTML/CSS/JS 前端
 - 模型：硅基流动 Pro/moonshotai/Kimi-K2.6（多模态，支持识图）
-  - API Key：`REDACTED_API_KEY`
 - 剧情数据源：`一歌_Leo_need活动剧情_完整版.md`（server.py 启动时自动加载500行关键对话注入 System Prompt）
 - 已完成功能：
   - 三栏布局 + 打字机效果 + 气泡渐入动画
@@ -613,7 +610,6 @@ metadata:
 | 文件 | 位置 | 说明 |
 |---|---|---|
 | 用户设置 | `C:\Users\AiYi\.dsh\settings.yaml` | LLM provider/model、默认 preset 等 |
-| API 密钥 | `C:\Users\AiYi\.dsh\.credentials.yaml` | 小米 mimo-v2.5 和 DeepSeek 的 API key |
 | 标准 preset | `E:\0\AI\deepseek-harness-master\apps\cli\config\agent-presets\standard\agent.cordis.yml` | 默认编码 Agent 配置 |
 | 一歌 preset（工作区源） | `E:\0\AI\CC\.dsh-presets\ichika\agent.cordis.yml` | 星乃一歌聊天陪伴 AI 的 preset |
 | 一歌 preset（C 盘副本） | `C:\Users\AiYi\.dsh\.agent-presets\ichika\` | 同步副本（Windows junction 限制，必须放 C 盘） |
